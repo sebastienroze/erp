@@ -1,0 +1,22 @@
+Création de la base de donnée MYSQL.
+
+Le dossier SQL contient les script SQL à exécuter pour créér la base de donnée.
+
+Le script CreateDatabase créé le schéma dans MySQL et l'utilisateur ERP
+La ligne suivante ne fonctionne pas :
+GRANT SELECT, INSERT, UPDATE ON erp.* TO 'erpuser'@'localhost';
+Dans ce cas, il faut donner les droits manuellement à l'utilisateur en utilisant l'interface de MySQL.
+
+Le script CreateTables créé toutes les tables de la base.
+Il faut l'exécuter après avoir créé la base de donnée.
+
+Le script DropTables supprime toutes les tables de la base dans le bon ordre.
+
+Le script RempliTVA initialise les taux de TVA pour les tests.
+Dans l'application, le menu utilistaire permet de générer des données de test.
+ 
+Le chemins relatifs fonctionnent bien pour l'application SWING.
+Par contre ils seront erroné por l'application Webpar rapport à l'emplacement de Tomcat
+Pour cela, dans l'application, utiliser le menu paramètres et renseigner : 
+- FondDePageFacture (exemple C:\java\eclipse-workspace\ERP\ModeleFacture.pdf)
+- CheminFichierFacture (exemple C:\java\temp)

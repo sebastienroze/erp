@@ -1,0 +1,59 @@
+.hidden {
+	display:none!important;
+}
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+thead {
+	display: block;
+	background-color: rgb(40, 285, 150)
+}
+
+tbody {
+	max-height: calc(100vh - 190px);
+	overflow-y: auto;
+	display: block;
+	cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */	
+}
+
+tbody>tr:nth-child(odd) {
+	background: white
+}
+
+tbody>tr:nth-child(even) {
+	background: lightgoldenrodyellow;
+}
+
+td, th {
+	border: 1px solid black;
+	width: 100px;
+	text-align: center;
+	width: 150px;
+	max-width: 150px;
+	overflow-wrap: break-word;
+}
+
+.line_selected {
+	background-color: rgb(10, 85, 30)!important; ;
+	color: white;
+
+}
+
+label {
+	display: inline-block;
+	width: 100px;	
+}
+
+select:disabled {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+	appearance:none;    
+	color: black;
+	opacity: 100%;
+ }
+ 
