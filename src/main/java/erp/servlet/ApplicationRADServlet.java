@@ -26,19 +26,6 @@ public class ApplicationRADServlet extends HttpServlet {
 		DataRAD.maxFieldLength = 30;
 	}	
 	
-	public boolean checkLogin(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		HttpSession session = request.getSession();
-		String login = (String) session.getAttribute("login");
-		if (login == null) {			
-			ErpFicheHtml erpFicheHtml = new ErpFicheHtml(apiURL, "Login") ;
-			new FicheLogin(erpFicheHtml);			
-			erpFicheHtml.setValuesAndWriteResponse(request.getParameterMap(),response);
-			response.getWriter().print(erpFicheHtml.getContent());
-			return false;
-		}
-		return true;
-	}
-	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
